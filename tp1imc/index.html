@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<!-- saved from url=(0081)file:///C:/Users/intel/Downloads/programaci%C3%B3n%204to/melanysanchez/index.html -->
-<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- saved from url=(0081)file:///C:/Users/intel/Downloads/progrmacion/proyecto%204to%20robotica/index.html -->
+<html lang="es" style="
+    width: 25px;
+"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Calculo imc</title>  
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +23,7 @@
             float: left;
             background: #000000c0;
             color: white;
-            text-align: center;
+           text-align: center;
         }
         h1 {
             text-align: center;
@@ -43,7 +45,7 @@
             margin-top: 15px;
             padding: 10px;
             width: 98%;
-            background-color: #3ccf3b; /* Color del botón */
+            background-color:#a470e7 ; /* Color del botón */
             color: rgb(0, 0, 0);
             border: none;
             border-radius: 5px;
@@ -62,9 +64,9 @@
 </head>
 <body>
     <div class="container">
-        <img src="./src/img/cartoon_fondo.jpeg" width="250">
+        <img src="./index_files/cartoon_fondo.jpeg" width="250">
         <h1>Cálculo del Estado de Peso</h1>
-        <form action="file:///C:/Users/intel/Downloads/programaci%C3%B3n%204to/melanysanchez/index.html" onsubmit="calcular_estado_peso(event)">
+        <form action="" onsubmit="calcular_estado_peso(event)">
             <label for="altura">Altura (m):</label>
             <input type="number" name="altura" id="altura" step="0.01" min="0" required="">
             <label for="peso">Peso (kg):</label>
@@ -72,10 +74,10 @@
             <button type="submit">Resultado Estado de Peso</button>
         </form>
         <h2 id="resu"></h2>
-        <img id="pesos" src="file:///C:/Users/intel/Downloads/programaci%C3%B3n%204to/melanysanchez/index.html" alt="" srcset="">
+        
     </div>
     <div class="container" style="margin-left: 4%;">
-        <img src="./src/img/cartoon_fondo.jpeg" width="250">
+        <img id="pesos" src="" alt="" width="250">
     </div>
 
     <script type="text/javascript">
@@ -91,16 +93,16 @@
                 var estado;
                 if (imc < 18.5) {
                     estado = "bajo peso";
-                    imgpeso.setAttribute("src","bajo_peso.png");
+                    imgpeso.setAttribute("src","src/img/bajo peso.jpg");
                 } else if (imc >= 18.5 && imc < 24.9) {
                     estado = "peso normal";
-                    imgpeso.setAttribute("src","peso_adecuado.png");
+                    imgpeso.setAttribute("src","src/img/peso-nomal.jpg");
                 } else if (imc >= 25 && imc < 29.9) {
                     estado = "sobrepeso";
-                    imgpeso.setAttribute("src","sobrepeso.png");
+                    imgpeso.setAttribute("src","src/img/sobrepeso.jpg");
                 } else {
                     estado = "obesidad";
-                    imgpeso.setAttribute("src","sobrepeso.png");
+                    imgpeso.setAttribute("src","src/img/obecidad.jpg");
                 }
 
                 document.getElementById("resu").innerText = "Estado: " + estado;
